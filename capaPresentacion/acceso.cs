@@ -23,21 +23,21 @@ namespace capaPresentacion
         Nusuario objnuser = new Nusuario();
         formulario_principal frm = new formulario_principal();
 
-        public static string Usuario_nombre;
-        public static string Area;
+        public static string Usuario;
+        public static string Roles;
 
         void login()
         {
             DataTable dt = new DataTable();
             objeuser.usuario = txt_usuario.Text;
             objeuser.contraseña = txt_contraseña.Text;
-            dt = objnuser.N_users(objeuser);
+            dt = objnuser.N_usuario(objeuser);
             if (dt.Rows.Count > 0)
             {
 
-                MessageBox.Show("BIENVENIDO  " + dt.Rows[0][4].ToString(), "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Usuario_nombre = dt.Rows[0][0].ToString();
-                Area = dt.Rows[0][1].ToString();
+                MessageBox.Show("Bienvedio al sistema  " + dt.Rows[0][4].ToString(), "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Usuario = dt.Rows[0][0].ToString();
+                Roles = dt.Rows[0][1].ToString();
 
                 frm.ShowDialog();
                 acceso login = new acceso();
