@@ -13,7 +13,7 @@ namespace capaDatos.Usuario
     public class Dusuario
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
-        public DataTable D_user(Eusuario obje)
+        public DataTable D_usuario(Eusuario obje)
         {
             SqlCommand cmd = new SqlCommand("sp_login", conn);
             cmd.CommandType = CommandType.StoredProcedure;
