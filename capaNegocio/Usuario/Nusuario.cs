@@ -13,9 +13,9 @@ namespace capaNegocio.Usuario
     {
         Dusuario objd = new Dusuario();
 
-        public DataTable N_users(Eusuario obje)
+        public DataTable N_usuarios(Eusuario obje)
         {
-            return objd.D_user(obje);
+            return objd.D_usuario(obje);
         }
     }
 }
